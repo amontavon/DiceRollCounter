@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fragmentBackground"
+    tools:context=".UpdateFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvRolling"
+        android:text="@string/rolling"
+        android:textColor="@color/fontColor"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/die_spinner"
+        app:layout_constraintLeft_toRightOf="@id/tvRolling"
+        app:layout_constraintRight_toLeftOf="@id/tvFor"
+        app:layout_constraintBottom_toTopOf="@id/d20_spinner">
+    </Spinner>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvFor"
+        android:text="@string/for_character"
+        android:textColor="@color/fontColor"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toRightOf="@id/die_spinner"
+        app:layout_constraintRight_toLeftOf="@id/character_spinner"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/character_spinner"
+        app:layout_constraintLeft_toRightOf="@id/tvFor"
+        app:layout_constraintBottom_toTopOf="@id/d20_spinner">
+    </Spinner>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_roll"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/d20_spinner"
+        android:id="@+id/btnRoll"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvRolled"
+        android:text="@string/rolled"
+        android:textColor="@color/fontColor"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/character_spinner"/>
+
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/d20_spinner"
+        app:layout_constraintLeft_toRightOf="@id/tvRolled"
+        app:layout_constraintRight_toLeftOf="@id/tvOn"
+        app:layout_constraintTop_toBottomOf="@id/character_spinner">
+    </Spinner>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvOn"
+        android:text="@string/on_a"
+        android:textColor="@color/fontColor"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toRightOf="@id/d20_spinner"
+        app:layout_constraintTop_toBottomOf="@id/character_spinner"/>
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rolltype_spinner"
+        app:layout_constraintLeft_toRightOf="@id/tvOn"
+        app:layout_constraintTop_toBottomOf="@id/character_spinner">
+    </Spinner>
+
+</android.support.constraint.ConstraintLayout>

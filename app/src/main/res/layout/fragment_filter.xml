@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fragmentBackground"
+    tools:context=".FilterFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvShowData"
+        android:text="@string/show_data"
+        android:textSize="18sp"
+        android:textColor="@color/fontColor"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </TextView>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imbtnSettings"
+        android:contentDescription="@string/back"
+        android:background="@drawable/baseline_settings_black_18dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvDieLabel"
+        android:text="@string/die_label"
+        android:textSize="16sp"
+        android:textColor="@color/fontColor"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvShowData"/>
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/die_spinner"
+        app:layout_constraintLeft_toRightOf="@id/tvDieLabel"
+        app:layout_constraintTop_toBottomOf="@id/tvShowData">
+    </Spinner>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvCharacterLabel"
+        android:text="@string/character_label"
+        android:textSize="16sp"
+        android:textColor="@color/fontColor"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/die_spinner"/>
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/character_spinner"
+        app:layout_constraintLeft_toRightOf="@id/tvCharacterLabel"
+        app:layout_constraintTop_toBottomOf="@id/die_spinner">
+    </Spinner>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvTypeLabel"
+        android:text="@string/roll_type_label"
+        android:textSize="16sp"
+        android:textColor="@color/fontColor"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/character_spinner"/>
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rolltype_spinner"
+        app:layout_constraintLeft_toRightOf="@id/tvTypeLabel"
+        app:layout_constraintTop_toBottomOf="@id/character_spinner">
+    </Spinner>
+
+</android.support.constraint.ConstraintLayout>

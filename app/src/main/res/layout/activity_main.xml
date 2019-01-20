@@ -1,0 +1,32 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <fragment
+        android:id="@+id/filter_fragment"
+        android:name="rad_app.dicerollcounter.FilterFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        tools:layout="@layout/fragment_filter" />
+
+    <fragment
+        android:id="@+id/counter_fragment"
+        android:name="rad_app.dicerollcounter.CounterFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        tools:layout="@layout/fragment_counter" />
+
+    <fragment
+        android:id="@+id/update_fragment"
+        android:name="rad_app.dicerollcounter.UpdateFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        tools:layout="@layout/fragment_update" />
+
+</LinearLayout>

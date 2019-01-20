@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Settings">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvSettings"
+        android:text="@string/settings"
+        android:textSize="22sp"
+        android:textColor="@color/fontColor"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvIWould"
+        android:text="@string/i_would_like"
+        android:textSize="18sp"
+        android:textColor="@color/fontColor"
+        app:layout_constraintTop_toBottomOf="@id/tvSettings"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rgAddDelete"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvIWould">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rbAdd"
+            android:text="@string/add"
+            android:checked="true"
+            android:onClick="onActionChange"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rbDelete"
+            android:text="@string/delete"
+            android:onClick="onActionChange"/>
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvA"
+        android:text="@string/a"
+        android:textSize="18sp"
+        android:textColor="@color/fontColor"
+        app:layout_constraintTop_toBottomOf="@id/rgAddDelete"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/object_spinner"
+        app:layout_constraintTop_toBottomOf="@id/rgAddDelete"
+        app:layout_constraintLeft_toRightOf="@id/tvA">
+    </Spinner>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvName"
+        android:textColor="@color/fontColor"
+        android:textSize="18sp"
+        android:labelFor="@id/etName"
+        android:text="@string/name"
+        app:layout_constraintTop_toBottomOf="@id/tvA"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/etName"
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@id/tvA"
+        app:layout_constraintLeft_toRightOf="@id/tvName"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvSelect"
+        android:text="@string/select"
+        android:textSize="18sp"
+        android:textColor="@color/fontColor"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@id/tvA"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/delete_spinner"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@id/tvA"
+        app:layout_constraintLeft_toRightOf="@id/tvSelect"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvIWouldDelete"
+        android:text="@string/i_would_like"
+        android:textSize="18sp"
+        android:textColor="@color/fontColor"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@id/tvSelect"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rgData"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvIWouldDelete">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rbKeepData"
+            android:text="@string/keep_data"
+            android:checked="true"
+            android:onClick="onActionChange"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rbDeleteData"
+            android:text="@string/delete_data"
+            android:onClick="onActionChange"/>
+
+    </RadioGroup>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnBack"
+        android:text="@string/back"
+        android:onClick="onBack"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnSubmit"
+        android:text="@string/submit"
+        android:onClick="onSubmit"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

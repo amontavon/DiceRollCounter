@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="fragmentBackground">#A9A9A9</color>
+    <color name="fontColor">#000000</color>
+    <color name="counterColor">#D3D3D3</color>
+</resources>
